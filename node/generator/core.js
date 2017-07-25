@@ -1,7 +1,38 @@
 "use strict"
 
 let generate = () => {
-    return '1239900124231'
+    let citizenId = ""
+    citizenId = citizenId + getRandomInt(1, 9) //1
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //2
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //3
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //4
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //5
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(0, 10) //6
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(0, 10) //7
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(0, 10) //8
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(0, 10) //9
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(0, 10) //10
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //11
+    // console.log(citizenId)
+    citizenId = citizenId + getRandomInt(1, 10) //12
+    // console.log(citizenId)
+    citizenId = citizenId + generateLastNumber(citizenId)
+    // console.log(citizenId)
+    return citizenId
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 let generateLastNumber = (citizenId) => {
@@ -13,19 +44,13 @@ let generateLastNumber = (citizenId) => {
         result += element * multiplied
         multiplied--
     })
-
-    result = 11 - result % 11
-    result = result === 11 ? 1 : result
+// console.log(`1 ${result % 11}`)
+    result = 11 - (result % 11)
+// console.log(`2 ${result}`)
+    result = result >= 10 ? result - 10 : result
+// console.log(`3 ${result}`)
     return result
 }
-
-// module.exports = {
-//     generate: generate,
-//     generateLastNumber: generateLastNumber
-// }
-
-
-
 
 module.exports = generate
 module.exports.generateLastNumber = generateLastNumber

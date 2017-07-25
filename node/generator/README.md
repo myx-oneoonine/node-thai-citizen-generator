@@ -1,9 +1,9 @@
 # thai-citizen-generator
 simple way for generator thailand citizenID.
-| Fuction Name | Input        | Output           
-| ------------- |:-------------:|:-------------:|  
-| generateLastNumber | String(12)        | String(13) | 
-| generateCitizenId |         | String(13) | 
+| Function Name       | Input         | Output        |  
+|:-------------------:|:-------------:|:-------------:|  
+| generateLastNumber  | String(12)    | String(13)    | 
+| (default)           |               | String(13)    | 
 
 
 ```js
