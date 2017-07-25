@@ -1,15 +1,19 @@
 # thai-citizen-generator
+simple way for generator thailand citizenID.
 
-| Fuction Name | Input        | Output           
-| ------------- |:-------------:|:-------------:|  
-| generateLastNumber | String(12)        | String(13) | 
-| generateCitizenId |         | String(13) | 
+| Function Name       | Input         | Output        |
+| ----------------- |:-------------:|:-------------:|  
+| (default)           |               | String(13)    | 
+| generateLastNumber  | String(12)    | String(1)    | 
+
 
 
 ```js
-let thaiCitizenIsValid = require('thai-citizen-validator')
+let thaiCitizenId = require('thai-citizen-generator')
 
-if(thaiCitizenIsValid('1234567890121')) {
-  ...
-}
+citizenId = thaiCitizenId() // '3197955418160'
+
+lastCitizenNumber = thaiCitizenId.generateLastNumber('123456789012') // '1'
+
+
 ```
