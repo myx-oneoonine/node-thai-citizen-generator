@@ -1,6 +1,7 @@
 "use strict"
 
-var thGen = require('../generator/core.js')
+// var thGen = require('../generator/core.js')
+var thGen = require('thai-citizen-generator')
 let assert = require('assert')
 
 // console.log(thGen())
