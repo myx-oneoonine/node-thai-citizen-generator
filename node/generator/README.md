@@ -11,9 +11,9 @@ simple way for generator thailand citizenID.
 ```js
 let thaiCitizenId = require('thai-citizen-generator')
 
-citizenId = thaiCitizenId() // '3197955418160'
+let citizenId = thaiCitizenId() // '3197955418160'
 
-lastCitizenNumber = thaiCitizenId.generateLastNumber('123456789012') // '1'
+let lastCitizenIdNumber = thaiCitizenId.generateLastNumber('123456789012') // '1'
 
 
 ```
