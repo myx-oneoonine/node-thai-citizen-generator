@@ -3,7 +3,10 @@
   "version": "1.0.3",
   "description": "Thai CitizenId Generator",
   "main": "core.js",
-
+  "scripts": {
+    "test": "node test/test.js",
+    "test:compatibility": "node test/compatibility.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/myx4play/node-thai-citizen-generator.git"
