@@ -1,7 +1,7 @@
-"use strict"
+'use strict'
 
 let generate = () => {
-    let citizenId = ""
+    let citizenId = ''
     citizenId = citizenId + getRandomInt(1, 9) //1
     citizenId = citizenId + getRandomInt(1, 10) //2
     citizenId = citizenId + getRandomInt(1, 10) //3
@@ -20,11 +20,10 @@ let generate = () => {
 }
 
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min
 }
 
 let generateLastNumber = (citizenId) => {
-
     let result = 0
     let multiplied = 13
 
@@ -35,7 +34,7 @@ let generateLastNumber = (citizenId) => {
 
     result = 11 - (result % 11)
     result = result >= 10 ? result - 10 : result
-    
+
     return result
 }
 

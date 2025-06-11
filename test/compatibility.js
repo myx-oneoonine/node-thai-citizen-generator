@@ -1,30 +1,28 @@
-"use strict"
+'use strict'
 
 // Try to require the package as installed dependency, fallback to local file
-let thaiCitizenId;
+let thaiCitizenId
 try {
-    thaiCitizenId = require('thai-citizen-generator');
+    thaiCitizenId = require('thai-citizen-generator')
 } catch (e) {
-    thaiCitizenId = require('../core.js');
+    thaiCitizenId = require('../core.js')
 }
 
 // Implementation of validateCitizenIDPattern function for compatibility test
 function validateCitizenIDPattern(citizenId) {
     // Check if it's a 13-digit string
     if (typeof citizenId !== 'string' || citizenId.length !== 13) {
-        return false;
+        return false
     }
-    
+
     // Check if all characters are digits
-    return /^\d{13}$/.test(citizenId);
+    return /^\d{13}$/.test(citizenId)
 }
 
 let validate = (citizenId) => {
     if (validateCitizenIDPattern(citizenId)) {
         return thaiCitizenId.generateLastNumber(citizenId.substring(0, 12)) == citizenId.substring(12)
-    }
-    else
-        return false
+    } else return false
 }
 
 // Test the compatibility code
@@ -44,13 +42,7 @@ if (!isValid) {
 }
 
 // Test with known valid IDs from the test file
-let testIds = [
-    '1239900124231',
-    '1234567890121', 
-    '1559900050472',
-    '8199292747830',
-    '3197955418160'
-]
+let testIds = ['1239900124231', '1234567890121', '1559900050472', '8199292747830', '3197955418160']
 
 for (let testId of testIds) {
     let result = validate(testId)
@@ -63,7 +55,7 @@ for (let testId of testIds) {
 
 // Test with invalid IDs
 let invalidIds = [
-    '123',  // too short
+    '123', // too short
     'abcd567890123', // contains letters
     '12345678901234', // too long
     '1234567890120' // wrong checksum
