@@ -1,6 +1,6 @@
 # thai-citizen-generator
 
-simple way for generator thailand citizenID.
+Simple way to generate Thailand citizen ID.
 
 | Function Name      |   Input    |   Output   |
 | ------------------ | :--------: | :--------: |
