@@ -2,9 +2,9 @@
   "name": "thai-citizen-generator",
   "version": "1.0.3",
   "description": "Thai CitizenId Generator",
-  "main": "core.js",
+  "main": "main.js",
   "scripts": {
-    "test": "cd test && npm test"
+    "test": "node test/test.js"
   },
   "engines": {
     "node": ">=14.0.0"

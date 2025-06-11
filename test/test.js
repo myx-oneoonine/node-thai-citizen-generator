@@ -1,6 +1,6 @@
 'use strict';
 
-const thGen = require('../core.js');
+const thGen = require('../main.js');
 const assert = require('assert');
 
 /**
