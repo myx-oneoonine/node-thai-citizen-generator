@@ -56,3 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# package-lock.json for packages with no dependencies
+package-lock.json

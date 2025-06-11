@@ -1,6 +1,12 @@
 "use strict"
 
-let thaiCitizenId = require('../core.js')
+// Try to require the package as installed dependency, fallback to local file
+let thaiCitizenId;
+try {
+    thaiCitizenId = require('thai-citizen-generator');
+} catch (e) {
+    thaiCitizenId = require('../core.js');
+}
 
 // Implementation of validateCitizenIDPattern function for compatibility test
 function validateCitizenIDPattern(citizenId) {
