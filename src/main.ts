@@ -60,8 +60,10 @@ function generate(): string {
 module.exports = generate;
 module.exports.generateLastNumber = generateLastNumber;
 
-// Export types for TypeScript users
-export = generate;
+// TypeScript support
+// eslint-disable-next-line no-redeclare
 declare namespace generate {
-    function generateLastNumber(citizenId: string): number;
+    export { generateLastNumber };
 }
+
+export = generate;

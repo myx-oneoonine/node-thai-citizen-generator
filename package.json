@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/myx-oneoonine/node-thai-citizen-generator#readme",
   "devDependencies": {
-    "@types/node": "^24.0.1",
+    "@types/node": "^18.19.0",
     "@typescript-eslint/eslint-plugin": "^8.34.0",
     "@typescript-eslint/parser": "^8.34.0",
     "eslint": "^8.57.0",
