@@ -2,14 +2,18 @@
   "name": "thai-citizen-generator",
   "version": "1.0.3",
   "description": "Thai CitizenId Generator",
-  "main": "main.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
-    "test": "node test/test.js",
-    "test:compatibility": "node test/compatibility.js",
-    "lint": "eslint *.js test/*.js",
-    "lint:fix": "eslint *.js test/*.js --fix",
-    "format": "prettier --write *.js test/*.js",
-    "format:check": "prettier --check *.js test/*.js"
+    "build": "tsc",
+    "prebuild": "rm -rf dist",
+    "prepare": "npm run build",
+    "test": "npm run build && node test/test.js",
+    "test:compatibility": "npm run build && node test/compatibility.js",
+    "lint": "eslint src/**/*.ts test/*.js",
+    "lint:fix": "eslint src/**/*.ts test/*.js --fix",
+    "format": "prettier --write src/**/*.ts test/*.js",
+    "format:check": "prettier --check src/**/*.ts test/*.js"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -25,7 +29,11 @@
   },
   "homepage": "https://github.com/myx-oneoonine/node-thai-citizen-generator#readme",
   "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript": "^5.8.3"
   }
 }

@@ -5,7 +5,7 @@
  * This test ensures the example code from the issue works correctly
  */
 
-let thaiCitizenId = require('../main.js');
+let thaiCitizenId = require('../dist/main.js');
 
 function validateCitizenIDPattern(citizenId) {
     // Basic pattern validation - 13 digits
