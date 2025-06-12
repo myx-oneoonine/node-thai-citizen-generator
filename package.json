@@ -4,7 +4,12 @@
   "description": "Thai CitizenId Generator",
   "main": "main.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "test:compatibility": "node test/compatibility.js",
+    "lint": "eslint *.js test/*.js",
+    "lint:fix": "eslint *.js test/*.js --fix",
+    "format": "prettier --write *.js test/*.js",
+    "format:check": "prettier --check *.js test/*.js"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -18,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/myx-oneoonine/node-thai-citizen-generator/issues"
   },
-  "homepage": "https://github.com/myx-oneoonine/node-thai-citizen-generator#readme"
+  "homepage": "https://github.com/myx-oneoonine/node-thai-citizen-generator#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
 }
