@@ -9,7 +9,8 @@
     "lint": "eslint *.js test/*.js",
     "lint:fix": "eslint *.js test/*.js --fix",
     "format": "prettier --write *.js test/*.js",
-    "format:check": "prettier --check *.js test/*.js"
+    "format:check": "prettier --check *.js test/*.js",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -26,6 +27,9 @@
   "homepage": "https://github.com/myx-oneoonine/node-thai-citizen-generator#readme",
   "devDependencies": {
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "semantic-release": "^22.0.12",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1"
   }
 }
